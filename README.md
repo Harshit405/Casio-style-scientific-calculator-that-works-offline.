@@ -1,155 +1,136 @@
-# Radix Calculator
+# Radix Calculator 🧮
 
-A Casio-style scientific calculator that runs in the browser, installs on Android and iPhone, and works fully offline. No account, no tracking, no network calls after the first load.
+A Casio-style scientific calculator that runs in your browser, installs on Android and iPhone, and works fully offline.
 
-## Contents
+🚀 **Try it now:** [radix-calculator.vercel.app](https://radix-calculator.vercel.app/)
 
-- [Features](#features)
-- [Quick start](#quick-start)
-- [Install on a phone](#install-on-a-phone)
-- [Offline use](#offline-use)
-- [Using the menu](#using-the-menu)
-- [Updating](#updating)
-- [Privacy](#privacy)
-- [Project files](#project-files)
-- [Troubleshooting](#troubleshooting)
-- [License](#license)
-- [Third-party software and licences](#third-party-software-and-licences)
+I've deployed Radix Calculator so you can open it directly in your browser and try its features. Install it on your phone for a calculator experience that works even without an internet connection.
+
+No account. No tracking. No network calls after the first load.
 
 ## Features
 
-**Calculator**
-- Scientific keypad with trig, hyperbolic, log, powers, roots, factorial, nPr, nCr, Pol/Rec, GCD, LCM, Int, Intg, Ran#, RanInt
-- Fractions with S⇔D conversion, exact results as π multiples and surds
-- Degree, radian and gradian angles; DMS entry and display (° ′ ″)
-- Display formats: Norm 1, Norm 2, Fix, Sci, Eng
-- Memory (M+, M−, MR), Ans, variables A–F, X, Y, M
-- 40 physical constants
-- Numerical integration, derivative and summation (∫, d/dx, Σ)
-- History
+### Calculator
+- Scientific keypad with trigonometry, hyperbolic functions, logarithms, powers, roots, factorial, nPr, nCr, Pol/Rec, GCD, LCM, Int, Intg, Ran# and RanInt.
+- Fractions with S⇔D conversion, exact results as π multiples and surds.
+- Degree, radian and gradian angles, with DMS entry and display (° ′ ″).
+- Display formats: Norm 1, Norm 2, Fix, Sci and Eng.
+- Memory (M+, M−, MR), Ans and variables A–F, X, Y and M.
+- 40 physical constants.
+- Numerical integration, differentiation and summation.
+- Calculation history.
 
-**Modes**
+### Modes
 
 | Mode | What it does |
-| --- | --- |
-| Complex | a + bi and r ∠ θ arithmetic, powers, roots |
-| Base-N | BIN, OCT, DEC, HEX conversion and AND, OR, XOR, NOT, shifts |
+|---|---|
+| Complex | a + bi and r ∠ θ arithmetic, powers and roots |
+| Base-N | BIN, OCT, DEC, HEX conversion and bitwise operations |
 | Stats | Mean, spread, regression and best-fit line |
-| Distribution | Normal, binomial and Poisson |
-| Solve | Equations up to 4th degree, 2 and 3 unknown systems, f(X) = 0 |
+| Distribution | Normal, binomial and Poisson distributions |
+| Solve | Equations up to 4th degree, systems of equations and f(X) = 0 |
 | Inequality | Polynomial inequalities |
-| Matrix | Determinant, inverse, multiply |
+| Matrix | Determinants, inverses and multiplication |
 | Vector | 2D and 3D operations |
-| Calculus | Integral, derivative, sum |
+| Calculus | Integration, differentiation and summation |
 | Ratio | A : B = X : D and A : B = C : X |
-| Spreadsheet | 45 rows by 5 columns, A1 references, Sum, Mean, Min, Max, Prod, Count, fill down |
-| CALC | Re-run an expression with new variable values |
-| Verify | Check whether a statement is true or false |
-| Table | Values of f(x) over a range |
+| Spreadsheet | 45 rows × 5 columns, cell references and built-in functions |
+| CALC | Recalculate expressions using new variable values |
+| Verify | Check whether a mathematical statement is true or false |
+| Table | Calculate values of f(x) over a range |
 | Convert | Length, mass, temperature and more |
-| QR Code | Turn a result or any text into a QR code, generated on the device |
+| QR Code | Generate QR codes from results or text directly on your device |
 
 ## Quick start
 
-The app is plain static files with no build step. It needs hosting once so a phone can install it. Netlify Drop is the quickest way and is free.
+The app uses plain static files and requires no build step. The deployed version is available here:
 
-1. Unzip the package on your computer. Open the unzipped folder and check that `index.html` is directly inside it.
-2. Open <https://app.netlify.com/drop> and drag the unzipped folder onto the page.
-3. Netlify gives you an `https://` address. Open it on your phone.
+**🌐 [Open Radix Calculator](https://radix-calculator.vercel.app/)**
 
-**Important:** drag the folder that contains `index.html`, not the zip and not a folder that holds another folder. Otherwise the site shows a "Page not found" error.
+Open the link and start calculating. To install it on your phone and use it offline, follow the steps below.
 
-Installing and offline use need an `https://` address (or `localhost`). Opening the files directly from storage will not register the offline cache.
+### Install on Android
 
-The included `_headers` file stops browsers from keeping an old `sw.js`, so updates reach phones quickly.
+1. Open the website in Chrome.
+2. Tap the ☰ DEG menu.
+3. Select **Install app** and confirm.
 
-## Install on a phone
+You can also use Chrome's menu to install the app.
 
-**Android (Chrome)**
-1. Open the app address.
-2. Tap **☰ DEG**, then **Install app**, then confirm.
-   You can also use Chrome's menu, then **Install app**.
+### Install on iPhone and iPad
 
-**iPhone and iPad (Safari)**
-1. Open the app address in Safari.
-2. Tap **Share**, then **Add to Home Screen**, then **Add**.
-   Apple does not let a web page open this screen itself, so on iPhone the menu shows these steps instead of a one-tap button.
+1. Open the website in Safari.
+2. Tap **Share**.
+3. Select **Add to Home Screen**.
+4. Tap **Add**.
 
-After installing, the app opens full screen from its own icon.
+The calculator will open from your home screen like a regular app.
 
 ## Offline use
 
-1. Open the app once while online. The first load saves every file on the phone.
-2. Tap **☰ DEG**. The line at the bottom of the menu reads **Ready offline** when saving is done.
-3. From then on the app opens and works with no internet.
+1. Open the hosted app once while connected to the internet.
+2. Open the ☰ DEG menu.
+3. Wait until the menu displays **Ready offline**.
 
-Everything works offline: all modes, history, the spreadsheet, constants and QR codes.
+After the files have been cached, the calculator can run without an internet connection.
 
-### Single-file version
-
-`radix-calculator-offline.html` has the fonts and QR maker built in and needs no hosting.
-
-- **Android:** copy it to the phone and open it in Chrome from the Files app.
-- **Limits:** it cannot be installed to the home screen, and iPhone cannot open local HTML files. Use the hosted package on iPhone.
-
-## Using the menu
-
-Every setting lives behind the **☰ DEG** button.
-
-- **Angle unit:** Degree, Radian, Gradian
-- **Modes:** open any mode from the grid
-- **Setup:** Fix, Sci, Eng and fraction display
-- **Copy result:** copy the answer on screen
-- **Install app:** add to the home screen
-- **Check for update:** fetch the latest version (shown when the app is running from a host)
-
-## Updating
-
-1. Upload the new files to the same host, replacing the old ones.
-2. On the phone, tap **☰ DEG**, then **Check for update**, or just open the app while online.
-
-The cache name changes with every build, so old files are removed automatically and no manual clearing is needed.
+All calculation modes, history, spreadsheet features, constants and QR code generation are designed to work offline.
 
 ## Privacy
 
-- All calculations and QR codes are made on your device.
-- Nothing is sent to any server. There are no analytics, ads or accounts.
-- Spreadsheet content and settings are kept only in your browser's local storage.
+- Calculations and QR codes are generated on your device.
+- No account is required.
+- No analytics or advertisements.
+- Spreadsheet content and settings are stored in your browser's local storage.
+- The app is designed to make no network requests after the initial files have been loaded, except when checking for updates.
 
 ## Project files
 
 | File | Purpose |
-| --- | --- |
-| `index.html` | The whole calculator (HTML, CSS and JavaScript in one page) |
-| `manifest.webmanifest` | App name, colours and icons for installing |
-| `sw.js` | Service worker: versioned offline cache |
-| `icon-192.png`, `icon-512.png` | App icons (the 512 icon also serves as the maskable icon) |
+|---|---|
+| `index.html` | Calculator interface, styling and JavaScript |
+| `manifest.webmanifest` | App name, colours and installation settings |
+| `sw.js` | Service worker for offline caching |
+| `icon-192.png` | App icon |
+| `icon-512.png` | High-resolution app icon |
 | `apple-touch-icon.png` | iPhone home screen icon |
-| `LICENSE`, `THIRD-PARTY-NOTICES.txt` | Licence terms |
-| `_headers` | Netlify setting: keeps `sw.js` from being cached by the browser |
-| `fonts/` | DM Mono and Barlow Semi Condensed, bundled so no font is fetched online |
+| `_headers` | Hosting configuration for service worker caching |
+| `fonts/` | Bundled DM Mono and Barlow Semi Condensed fonts |
+| `LICENSE` | MIT License |
+| `THIRD-PARTY-NOTICES.txt` | Third-party licence notices |
+
+## Updating
+
+The hosted version can be updated by deploying the new files to the same hosting project.
+
+When online, open the app and use **☰ DEG → Check for update** to fetch the latest version.
 
 ## Troubleshooting
 
 | Problem | Fix |
-| --- | --- |
-| No **Install app** button on Android | Use Chrome, open the hosted `https://` address, and make sure it is not a private window. If the app is already installed the button is hidden. |
-| Menu never reaches **Ready offline** (it may say "Saving the app for offline use…" or "This browser cannot save apps for offline use") | The page is not on `https://`, is inside a preview frame, or the browser is unsupported. Open the hosted address directly in Chrome or Safari. |
-| iPhone shows no install prompt | Expected. Use Safari, then Share, then Add to Home Screen. Other iPhone browsers may not offer it. |
-| "Page not found" after uploading | `index.html` is not at the top level of the uploaded folder. Unzip, open the folder, and drag the one that directly contains `index.html` onto Netlify Drop again. |
-| Old version still showing | Tap **☰ DEG**, then **Check for update**, then fully close and reopen the app. |
-| Offline file will not open on iPhone | iPhone cannot open local HTML files. Use the hosted package. |
-| QR code will not scan | Shorten the text, increase screen brightness, and hold the camera steady. Very long text makes dense codes. |
+|---|---|
+| Install option is missing on Android | Use Chrome and open the HTTPS website directly. |
+| Offline status never appears | Open the hosted website directly in a supported browser, not inside a preview frame. |
+| No installation prompt on iPhone | Use Safari and select Share → Add to Home Screen. |
+| Page not found | Ensure `index.html` is at the root of the deployed directory. |
+| Old version still appears | Check for updates, then close and reopen the app. |
+| QR code will not scan | Increase screen brightness, hold the camera steady and shorten long text. |
 
 ## License
 
-Radix Calculator is released under the [MIT License](LICENSE). You may use, copy, modify and distribute it, including commercially, as long as the copyright and licence notice are kept.
+Radix Calculator is released under the MIT License. You may use, copy, modify and distribute it, including commercially, provided the copyright and licence notices are retained.
 
-## Third-party software and licences
+### Third-party software
 
-- **DM Mono** and **Barlow Semi Condensed** fonts, SIL Open Font License 1.1 (texts in `fonts/`)
-- **qrcode-generator** 1.4.4 by Kazuhiko Arase, MIT licence (embedded in `index.html`)
+- DM Mono and Barlow Semi Condensed fonts — SIL Open Font License 1.1.
+- qrcode-generator 1.4.4 by Kazuhiko Arase — MIT License.
 
-Full notices are in `THIRD-PARTY-NOTICES.txt`.
+Full notices are available in `THIRD-PARTY-NOTICES.txt`.
 
-The numerical results are computed in standard double precision, so very large or very small values can show small rounding differences from a hardware calculator.
+*Note: Numerical calculations use standard double-precision arithmetic, so very large or very small values may have minor rounding differences compared with dedicated hardware calculators.*
+
+---
+
+**Built for everyday calculations, advanced mathematics and offline convenience.**
+
+🚀 **Try it today: [radix-calculator.vercel.app](https://radix-calculator.vercel.app/)**
