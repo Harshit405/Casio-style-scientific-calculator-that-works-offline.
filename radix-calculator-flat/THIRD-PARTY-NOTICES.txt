@@ -1,0 +1,16 @@
+THIRD-PARTY NOTICES
+===================
+
+This package includes the following third-party software.
+
+1. qrcode-generator 1.4.4 (embedded in index.html)
+   Copyright (c) 2009 Kazuhiko Arase
+   Licensed under the MIT license: http://www.opensource.org/licenses/mit-license.php
+   The word "QR Code" is a registered trademark of DENSO WAVE INCORPORATED.
+
+2. DM Mono (fonts/dm-mono-*.woff2)
+   Copyright 2020 The DM Mono Project Authors
+   SIL Open Font License 1.1. Full text: fonts/LICENSE-DM-Mono.txt
+
+3. Barlow Semi Condensed (fonts/barlow-semi-condensed-*.woff2)
+   SIL Open Font License 1.1. Full text: fonts/LICENSE-Barlow-Semi-Condensed.txt
